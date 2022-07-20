@@ -8,6 +8,8 @@ This is a very simple sandbox for experimenting with the log aggregation system 
 
   * Typically, Grafana plugs into this query API as a datasource, thus allowing you to visualise and query your logs.
 
+### Architecture
+
 The diagram below illustrates the components which make up a typical Loki Grafana stack:
 
 ![](./loki.png)
@@ -20,11 +22,15 @@ The diagram below illustrates the components which make up a typical Loki Grafan
 
 ### Forewarning
 
-> :warning: The Loki stack was really intended to be deployed to a **Kubernetes cluster**.
+:warning: The Loki stack was really intended to be deployed to a **Kubernetes cluster**.
 
+For Java and Javascript applications, you can simply the deployment architecture by: 
+ 
+  * Removing the dependency on Promtail, by using either __Loki4J__, or __Winston Loki__. These libraries will automatically ship logs to Loki, thus simplifying the deployment architecture.
 
+  * Using Amazon managed Grafana.
 
-You can however greatly simply your life by removing the dependency on Promtail, by using either Loki4J, or Winston Loki.
+  * Then, all you need to do is run a Loki instance, and direct your apps to ship to it.
 
 ### Contents
 
