@@ -22,7 +22,7 @@ The diagram below illustrates the components which make up a typical Loki Grafan
 
 ### Forewarning
 
-:warning: The Loki stack was really intended to be deployed to a **Kubernetes cluster**.
+> :warning: The Loki stack was really intended to be deployed to a **Kubernetes cluster**.
 
 For Java and Javascript applications, you can simply the deployment architecture by: 
  
